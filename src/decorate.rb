@@ -6,12 +6,12 @@ end
 
 class Decorator < Nameable
   def initialize(nameable)
-    super(nameable)
+    super()
     @nameable = nameable
   end
 
   def correct_name
-    @nameable
+    @nameable.correct_name
   end
 end
 
@@ -23,6 +23,6 @@ end
 
 class TrimmerDecorator < Decorator
   def correct_name
-    @nameable.correct_name.split.first(10)
+    @nameable.correct_name.split.first(10).join(" ")
   end
 end
