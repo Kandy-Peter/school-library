@@ -6,6 +6,7 @@ end
 
 class Decorator < Nameable
   def initialize(nameable)
+    super(nameable)
     @nameable = nameable
   end
 
@@ -20,7 +21,7 @@ class CapitalizeDecorator < Decorator
   end
 end
 
-class TrimmerDecorator  < Decorator
+class TrimmerDecorator < Decorator
   def correct_name
     @nameable.correct_name.split.first(10)
   end
