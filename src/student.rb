@@ -6,6 +6,8 @@ class Student < Person
     @classroom = classroom
   end
 
+  belongs_to :classroom
+
   def play_hooky
     "¯\(ツ)/¯"
   end
