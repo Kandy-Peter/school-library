@@ -27,7 +27,7 @@ class Person < Decorate
   def correct_name
     @name
   end
-  
+
   def add_rental(date, person)
     @rentals << Rental.new(date, person, self)
   end
