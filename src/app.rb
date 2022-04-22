@@ -60,7 +60,8 @@ class App
     when 'n'
       puts 'Student does not have parent permission, can not rent books'
     when 'y'
-      @people.push(Student.new(age, name, parent_permission: true))
+      new_student = Student.new(age, name, parent_permission: false)
+      @people << new_student
       puts 'Student created successfully'
     end
   end
@@ -73,7 +74,7 @@ class App
     name = gets.chomp
     print 'Enter teacher specialization: '
     specialization = gets.chomp
-    @people.push(Teacher.new(specialization, age, name))
+    @people.push(Teacher.new(age, specialization, name))
     puts 'Teacher created successfully'
   end
 
