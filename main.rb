@@ -31,9 +31,6 @@ def user_input(answer)
     create_rental
   when 6
     list_all_rentals
-  when 7
-    puts 'Thank you for using this app'
-    exit
   else
     puts 'Enter numbers between 1 and 7'
   end

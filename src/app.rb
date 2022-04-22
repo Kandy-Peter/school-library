@@ -17,7 +17,10 @@ class App
 
     until all_options
       answer = gets.chomp.to_i
-
+      if answer == 7
+        puts 'Thank you for choosing this App'
+        break
+      end
       user_input answer
     end
   end
