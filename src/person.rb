@@ -1,11 +1,11 @@
 require_relative './decorate'
 require_relative './rentals'
 
-class Person < Decorate
+class Person < Decorator
   attr_reader :id
   attr_accessor :name, :age
 
-  def initialize(age, name = 'Unknown', parent_permission: false)
+  def initialize(age, name, parent_permission: true)
     super()
     @id = Random.rand(1..1000)
     @name = name
@@ -18,7 +18,7 @@ class Person < Decorate
     @age >= 18
   end
 
-  private :is_of_age?
+  private :of_age?
 
   def can_use_services?
     is_of_age || @parent_permission
