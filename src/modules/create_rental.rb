@@ -11,7 +11,7 @@ class CreateRental
 
   def create_rental
     puts 'Select which book you want to rent by entering its number'
-    [@books].each_with_index { |book, index| puts "#{index}) Title: #{book.title}, Author: #{book.author}" }
+    @books.each_with_index { |book, index| puts "#{index}) Title: #{book.title}, Author: #{book.author}" }
 
     book_id = gets.chomp.to_i
 
