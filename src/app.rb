@@ -11,7 +11,7 @@ class App
     @rentals = []
     @people = CreatePerson.new(@people)
     @books = CreateBook.new(@books)
-    @rentals = CreateRental.new({ rentals: @rentals, books: @books, people: @people})
+    @rentals = CreateRental.new({ rentals: @rentals, books: @books, people: @people })
   end
 
   def entry_point

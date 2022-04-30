@@ -58,5 +58,4 @@ class CreatePerson
     @people.push(Teacher.new(age, specialization, name))
     puts 'Teacher created successfully'
   end
-
 end
